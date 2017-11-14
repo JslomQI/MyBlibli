@@ -7,7 +7,8 @@ import VueRouter from 'vue-router'
 //import axios from 'axios'
 
 import App from './App'
-import Home from '@/components/_Home/Home'
+import Home from '@/components/_Home/Home.vue'
+import liveVideo from '@/components/_Home/liveVideo'
 import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
 
@@ -27,7 +28,11 @@ const routes = [
   component: PageTransition,
   children:[{
   	path:'',
-  	component:Home
+  	component:Home,
+  	children:[{
+  		path:"",
+  		component:liveVideo
+  	}]
   },{
   	path:'/detail/:goodsID',
   	component:Detail

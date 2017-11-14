@@ -1,4 +1,4 @@
-<template>
+<!--<template>
     <tabbar fixed>
       <tabbar-item>
         <img slot="icon" src="../assets/demo/icon_nav_button.png">
@@ -30,4 +30,44 @@
 </script>
 
 <style>
+</style>-->
+<template>
+    <tabbar fixed>
+      <tabbar-item>
+        <span slot="icon" class="iconfont icon-shouye red"></span>
+        <span slot="label">首页</span>
+      </tabbar-item>
+      <tabbar-item show-dot>
+      	<span slot="icon" class="iconfont icon-fenquweixuanzhong"></span>
+        <span slot="label">分类</span>
+      </tabbar-item>
+      <tabbar-item selected link="/component/demo">
+        <span slot="icon" class="iconfont icon-dongtai"></span>
+        <span slot="label">动态</span>
+      </tabbar-item>
+      <tabbar-item badge="2">
+        <span slot="icon" class="iconfont icon-message-copy"></span>
+        <span slot="label">消息</span>
+      </tabbar-item>
+    </tabbar>
+</template>
+
+<script>
+	import { Tabbar, TabbarItem } from 'vux'
+	
+	export default {
+	  components: {
+	    Tabbar, TabbarItem
+	  }
+	}
+</script>
+
+<style>
+	@import '../assets/iconfont_f/iconfont.css';
+	.iconfont{
+		font-size: 0.23rem;
+	}
+	.red{
+		color: #fa7298;
+	}
 </style>
