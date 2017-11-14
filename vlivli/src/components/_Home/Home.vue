@@ -1,42 +1,62 @@
 <template>
-	<group title="">
-      <cell :title="data.goodsName" is-link v-for="data in list" link="/detail/:{aaa}"></cell>
-    </group>
+	<div>
+		<!--<div class="home_top">
+			<ul class="top_ul">
+				<li class="top_li"><span class="active">直播</span></li>
+				<li class="top_li"><span>推荐</span></li>
+				<li class="top_li"><span>追番</span></li>
+				<li class="top_li"><span>影视</span></li>
+				<li class="top_li"><span>专栏</span></li>
+			</ul>
+		</div>-->
+		 <tab :line-width="3" custom-bar-width="40px">
+	      <tab-item selected>直播</tab-item>
+	      <tab-item>推荐</tab-item>
+	      <tab-item>追番</tab-item>
+	      <tab-item>影视</tab-item>
+	      <tab-item>专栏</tab-item>
+	    </tab>
+		<router-view></router-view>
+	</div>
 </template>
 
 <script>
-	import { Group, Cell } from 'vux'
+	import { Tab, TabItem } from 'vux'
 	export default {
 	  components: {
-	    Group,Cell
+	  	 Tab, TabItem
 	  },
 	  data () {
 	    return {
-	      // note: changing this line won't causes changes
-	      // with hot-reload because the reloaded component
-	      // preserves its current state and we are modifying
-	      // its initial state.
-	      //list:[],
+	      
 	    }
 	  },
 	  mounted() {
-//	  	this.$http({
-//		  	method:"get",
-//			url:"http://datainfo.duapp.com/shopdata/getGoods.php?callback="
-//	  	}).then((data) => {
-//	  		console.log(eval(data.data))
-//	  		this.list = eval(data.data)
-//	  	})
-		var that = this
-		this.$store.dispatch("getData", that);
+	  	
+	  	
 	 },
-	 computed:{
-	 	list() {
-	 		return this.$store.state.list
-	 	}
-	 }
+//	 computed:{
+//	 }
 	}
 </script>
 
 <style>
+	@import url("../../assets/lib/newPublic.css");
+	.child-view .vux-tab{
+		background-color: #FB7299;
+	}
+	.child-view .vux-tab .vux-tab-item.vux-tab-selected {
+		color: #FFF4F7;
+	}
+	.child-view .vux-tab .vux-tab-item{
+		box-sizing: border-box;
+		color: #fcdbe4;
+	}
+	.vux-tab .vux-tab-ink-bar .vux-tab-bar-inner{
+		background-color: #FAFAFA;
+		height: 3px;
+	}
+	.child-view{
+    	position: static !important; 
+	}
 </style>
