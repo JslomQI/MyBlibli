@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 //import axios from 'axios'
 
 import App from './App'
-import Info from '@/components/Info'
+import Home from '@/components/_Home/Home'
 import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
 
@@ -27,7 +27,7 @@ const routes = [
   component: PageTransition,
   children:[{
   	path:'',
-  	component:Info
+  	component:Home
   },{
   	path:'/detail/:goodsID',
   	component:Detail

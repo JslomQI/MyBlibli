@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    	<Home></Home>
+    	<Header-footer></Header-footer>
   </div>
 </template>
 
 <script>
-	import Home from '@/components/HelloFromVux'
+	import HeaderFooter from '@/components/HeaderFooter'
 	export default {
 	  name: 'app',
 	  components:{
-	  	Home
+	  	HeaderFooter
 	  }
 	}
 </script>
