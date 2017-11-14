@@ -10,6 +10,7 @@ import App from './App'
 import Home from '@/components/_Home/Home'
 import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
+import Dynamic from '@/components/dynamic/Dynamic'
 
 //简历状态集管理
 import Vuex from "vuex"
@@ -31,7 +32,10 @@ const routes = [
   },{
   	path:'/detail/:goodsID',
   	component:Detail
-  } ]
+  },{
+  	path:'/dynamic',
+  	component:Dynamic
+  }]
 }
 ]
 
