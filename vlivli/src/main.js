@@ -12,7 +12,7 @@ import liveVideo from '@/components/_Home/liveVideo'
 import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
-
+import FenquDetail from '@/components/dynamic/FenquDetail'
 //简历状态集管理
 import Vuex from "vuex"
 import store from "./store/TodoStore"
@@ -40,6 +40,9 @@ const routes = [
   },{
   	path:'/dynamic',
   	component:Dynamic
+  },{
+  	path:'/fenquDetail',
+  	component:FenquDetail
   }]
 }
 ]

@@ -1,8 +1,8 @@
 <template>
 	<div class="dynamic-fenqgu">
 		<ul>
-			<li><img src="../../assets/fengquPic/ic_category_live.png"/><a href="">直播</a></li>
-			<li><img src="../../assets/fengquPic/ic_category_t13.png"/><a href="">番剧</a></li>
+			<li><img src="../../assets/fengquPic/ic_category_live.png"/><a v-link="{path:'#/fenquDetail'}">直播</a></li>
+			<li><img src="../../assets/fengquPic/ic_category_t13.png"/><a href="#/fenquDetail">番剧</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_t1.png"/><a href="">动画</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_t167.png"/><a href="">国创</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_t3.png"/><a href="">音乐</a></li>
@@ -22,6 +22,8 @@
 			<li><img src="../../assets/fengquPic/ic_category_album.png"/><a href="">相簿</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_game_center.png"/><a href="">游戏中心</a></li>
 		</ul>
+		
+		
 	</div>
 </template>
 
@@ -46,12 +48,11 @@
 <style  scoped>
 	
 	.dynamic-fenqgu{
-		
 		width: 100%;
 	} 
 	
 	.dynamic-fenqgu img{
-		width: 2.5rem;
+		width: 0.3rem;
 	}
 	
 	.dynamic-fenqgu ul{
@@ -62,8 +63,8 @@
 		
 	}
 	.dynamic-fenqgu ul li{
-		margin-bottom: 1.3rem;
-		margin-top: 0.3rem;
+		margin-bottom: 0.12rem;
+		margin-top: 0.12rem;
 		width: 24%;
 		display: flex;
 		flex-direction: column;
@@ -72,7 +73,7 @@
 	}
 	.dynamic-fenqgu ul li a{
 		color: #666;
-		font-size: 0.8rem;
-		letter-spacing: 0.34rem;
+		font-size: 0.14rem;
+		letter-spacing: 0.04rem;
 	}
 </style>

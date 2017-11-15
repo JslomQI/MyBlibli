@@ -32,7 +32,7 @@
 <style>
 </style>-->
 <template>
-    <tabbar fixed>
+    <tabbar style="position:fixed">
       <tabbar-item link="/">
         <span slot="icon" class="iconfont icon-shouye red"></span>
         <span slot="label">首页</span>
