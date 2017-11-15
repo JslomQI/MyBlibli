@@ -33,11 +33,11 @@
 </style>-->
 <template>
     <tabbar fixed>
-      <tabbar-item>
+      <tabbar-item link="/">
         <span slot="icon" class="iconfont icon-shouye red"></span>
         <span slot="label">首页</span>
       </tabbar-item>
-      <tabbar-item show-dot>
+      <tabbar-item show-dot link="/dynamic">
       	<span slot="icon" class="iconfont icon-fenquweixuanzhong"></span>
         <span slot="label">分类</span>
       </tabbar-item>

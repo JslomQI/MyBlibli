@@ -36,15 +36,6 @@
 			}).then((data)=>{
 				console.log(data)
 			})
-			
-			
-		//			this.$http({
-		//		  	method:"get",
-		//			url:"http://datainfo.duapp.com/shopdata/getGoods.php?callback="
-		//	  	}).then((data) => {
-		//	  		console.log(eval(data.data))
-		//	  		this.list = eval(data.data)
-		//	  	})
 		}
 		
 		
@@ -53,9 +44,6 @@
 </script>
 	
 <style  scoped>
-	html,body{
-		font-size: 100px;
-	}
 	
 	.dynamic-fenqgu{
 		
