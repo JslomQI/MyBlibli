@@ -9,12 +9,37 @@
 
 <script>
 	import { Scroller } from 'vux'
-	
-	export default {
-		component:{
-			Scroller						
-		}
-	}
+
+export default {
+  components: {
+    Scroller
+  },
+  data () {
+    return {
+      showList1: true,
+      scrollTop: 0
+    }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.$refs.scrollerEvent.reset({top: 0})
+    })
+  },
+  methods: {
+    
+    onScroll (pos) {
+      this.scrollTop = pos.top
+    },
+    changeList () {
+      this.showList1 = false
+      this.$nextTick(() => {
+        this.$refs.scroller.reset({
+          top: 0
+        })
+      })
+    }
+  }
+}
 </script>
 
 <style>
