@@ -1,7 +1,7 @@
 <template>
 	<div class="dynamic-fenqgu">
 		<ul>
-			<li><img src="../../assets/fengquPic/ic_category_live.png"/><a v-link="{path:'#/fenquDetail'}">直播</a></li>
+			<li><img src="../../assets/fengquPic/ic_category_live.png"/><a>直播</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_t13.png"/><a href="#/fenquDetail">番剧</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_t1.png"/><a href="">动画</a></li>
 			<li><img src="../../assets/fengquPic/ic_category_t167.png"/><a href="">国创</a></li>
