@@ -1,70 +1,88 @@
 <template>
-	<scroller lock-x :scrollbar-y=false>
-      <div class="box1">
-        <div class="box1-item" v-for="i in 7"><span>{{' ' + i + ' '}}</span></div>
-      </div>
-    </scroller>
+	<div>
+		<scroller class="ScoBox" lock-y :scrollbar-x=false>
+	      <div class="box1">
+	        <div class="box1-item" v-for="i in children"><span>{{' ' + i.name + ' '}}</span></div>
+	      </div>
+	   </scroller>
+	   
+	   
+	   <router-view></router-view>
+	   
+	</div>
+		
+		
+		
     
 </template>
 
 <script>
-	import { Scroller } from 'vux'
+import { Scroller,Grid,GridItem } from 'vux'
 
 export default {
   components: {
-    Scroller
+    Scroller,
+    Grid,
+    GridItem
+  },
+  methods: {
+    onItemClick () {
+      console.log('on item click')
+    }
   },
   data () {
     return {
+      children:[],
+      DetailD:[],
       showList1: true,
       scrollTop: 0
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      this.$refs.scrollerEvent.reset({top: 0})
-    })
+  	this.$http({
+		method:"get",
+		url:"../../../../static/json/region2.json"
+	}).then((data)=>{
+		this.children =  eval(data.data)[1].children
+		console.log(this.children)
+	})
   },
   methods: {
     
     onScroll (pos) {
-      this.scrollTop = pos.top
-    },
-    changeList () {
-      this.showList1 = false
-      this.$nextTick(() => {
-        this.$refs.scroller.reset({
-          top: 0
-        })
-      })
+      this.scrollLeft = pos.left
     }
   }
 }
 </script>
 
-<style>
-	html,body{
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-	}
-	
-	.box1 {
-  height: 100px;
-  position: relative;
-  width: 1490px;
+<style scoped>
+html,body{
+	width: 100%;
+	overflow: hidden;
 }
-.box1-item {
-  width: 200px;
-  height: 100px;
-  background-color: #ccc;
+.ScoBox{
+	background-color: #FA7298;
+}
+.box1 {
+  position: relative;
+  width: 3.5rem;
+}
+.box1-item {color: #fff;
+  font-size: 0.12rem;
+  width: 0.5rem;
+  height: 0.2rem;
+  background-color: #FA7298;
   display:inline-block;
-  margin-left: 15px;
   float: left;
+  margin: 0 0.08rem;
   text-align: center;
-  line-height: 100px;
 }
 .box1-item:first-child {
   margin-left: 0;
+}
+.grid-center{
+	width: 45%;
+	background-color: #ccc;
 }
 </style>

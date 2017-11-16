@@ -13,6 +13,7 @@ import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
 import FenquDetail from '@/components/dynamic/FenquDetail'
+import DetailGrade from '@/components/dynamic/DetailGrad'
 //简历状态集管理
 import Vuex from "vuex"
 import store from "./store/TodoStore"
@@ -42,7 +43,11 @@ const routes = [
   	component:Dynamic
   },{
   	path:'/fenquDetail',
-  	component:FenquDetail
+  	component:FenquDetail,
+  	children:[{
+  		path:"",
+  		component:DetailGrade
+  	}]
   }]
 }
 ]
