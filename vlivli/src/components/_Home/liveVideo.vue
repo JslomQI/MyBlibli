@@ -1,7 +1,18 @@
 <template>
 	<div>
 		<div class="search">
-			<search
+			<!--<search
+		    @result-click="resultClick"
+		    @on-change="getResult"
+		    :results="results"
+		    v-model="value"
+		    position="absolute"
+		    auto-scroll-to-top top="0.30rem"
+		    @on-focus="onFocus"
+		    @on-cancel="onCancel"
+		    @on-submit="onSubmit"
+		    ref="search"></search>-->
+		     <search
 		    @result-click="resultClick"
 		    @on-change="getResult"
 		    :results="results"
@@ -21,38 +32,84 @@
 	      	<a href="javascript:;"><img src="../../assets/home_src/img/home_banner.png" width="100%"></a>
 	      </swiper-item>
 	    </swiper>
-	   <!--<div class="liveVideo_classify">
-			<ul class="classify_ul">
-				<li class="classify_li"><span class="active">关注</span></li>
-				<li class="classify_li"><span>娱乐</span></li>
-				<li class="classify_li"><span>游戏</span></li>
-				<li class="classify_li"><span>手游</span></li>
-				<li class="classify_li"><span>绘画</span></li>
-			</ul>
-		</div>-->
 		<div class="tabe_bar">
 			 <tabbar>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/demo/icon_nav_button.png">
+		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
 		        <span slot="label">关注</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/demo/icon_nav_msg.png">
+		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
 		        <span slot="label">娱乐</span>
 		      </tabbar-item>
 		      <tabbar-item selected link="/component/demo">
-		        <img slot="icon" src="../../assets/demo/icon_nav_article.png">
+		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
 		        <span slot="label">游戏</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/demo/icon_nav_cell.png">
+		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
 		        <span slot="label">手游</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/demo/icon_nav_cell.png">
+		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
 		        <span slot="label">绘画</span>
 		      </tabbar-item>
 		    </tabbar>
+	    </div>
+	    <div class="groom_video see_video">
+	    	<div class="viedo_title">
+	    		<p class="video_title_p">
+	    			<span class="p_left">
+	    				<i></i>
+	    				<span class="see_vide_style">推荐主播</span>
+	    			</span>
+	    			<span class="p_right">
+	    				<span class="goToSee_video goToSee" v-if="isFirstVideo">
+		    				当前有<span class="see_video_num">5942</span>个直播，进去看看
+		    			</span>
+		    			<span class="seeToSee_more goToSee" v-if="!isFirstVideo">更多</span>
+		    			<button class="go_video">></button>
+	    			</span>
+	    		</p>
+	    	</div>
+	    	<div class="video_list">
+	    		<nav class="video_list_nav">
+	    			<ul class="video_list_ul">
+	    				<li class="video_list_li">
+	    					<a href="javascript:;" class="video_pic_name">
+	    						<img src="../../assets/home_src/img/home_video_list1.png"  width="100%">
+	    						<span class="man_video_name">老骚豆腐</span>
+	    					</a>
+	    					<p class="video_intro">
+	    						【豆腐】 狼人杀！折寿游戏！
+	    					</p>
+	    					<p class="video_style_num">
+	    						<span class="video_style">狼人杀</span>
+	    						<span class="video_num">
+	    							<i></i>
+	    							<span>8680</span>
+	    						</span>
+	    					</p>
+	    				</li>
+	    				<li class="video_list_li">
+	    					<a href="javascript:;" class="video_pic_name">
+	    						<img src="../../assets/home_src/img/home_video_list1.png"  width="100%">
+	    						<span class="man_video_name">老骚豆腐</span>
+	    					</a>
+	    					<p class="video_intro">
+	    						【豆腐】 狼人杀！折寿游戏！
+	    					</p>
+	    					<p class="video_style_num">
+	    						<span class="video_style">狼人杀</span>
+	    						<span class="video_num">
+	    							<i></i>
+	    							<span>8680</span>
+	    						</span>
+	    					</p>
+	    				</li>
+	    			</ul>
+	    		</nav>
+	    	</div>
 	    </div>
 	</div>
 </template>
@@ -64,7 +121,7 @@
 			Swiper, SwiperItem, Search, Group, Cell, XButton, Tabbar, TabbarItem
 		},
 		methods:{
-			 setFocus () {
+		    setFocus () {
 		      this.$refs.search.setFocus()
 		    },
 		    resultClick (item) {
@@ -95,7 +152,8 @@
 		data: function(){
 			return {
 				results: [],
-      			value: '里番'
+      			value: '里番',
+      			isFirstVideo : true
 			}
 		}
 	}
@@ -112,21 +170,5 @@
 </script>
 
 <style>
-	.swiper{}
-	.vux-swiper-item{
-		padding: 0.1rem;
-		box-sizing: border-box;
-	}
-	.vux-swiper-item a img{
-	}
-	.weui-search-bar__form .weui-search-bar__label {
-		margin-top: 4px;
-		text-align: left;
-	}
-	.tabe_bar{
-		margin-top: ;
-	}
-	.tabe_bar .weui-tabbar{
-		position: static;
-	}
+	@import url("../../assets/home_src/css/live_video.css");
 </style>

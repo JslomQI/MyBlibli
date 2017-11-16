@@ -1,20 +1,11 @@
 <template>
 	<div>
-		<!--<div class="home_top">
-			<ul class="top_ul">
-				<li class="top_li"><span class="active">直播</span></li>
-				<li class="top_li"><span>推荐</span></li>
-				<li class="top_li"><span>追番</span></li>
-				<li class="top_li"><span>影视</span></li>
-				<li class="top_li"><span>专栏</span></li>
-			</ul>
-		</div>-->
-		 <tab :line-width="3" custom-bar-width="40px">
-	      <tab-item selected>直播</tab-item>
-	      <tab-item>推荐</tab-item>
-	      <tab-item>追番</tab-item>
-	      <tab-item>影视</tab-item>
-	      <tab-item>专栏</tab-item>
+		<tab :line-width="3" custom-bar-width="40px">
+	      <tab-item selected @click.native="clickMe('')">	直播</tab-item>
+	      <tab-item @click.native="clickMe('Groom')">		推荐</tab-item>
+	      <tab-item @click.native="clickMe('AfterTribes')">	追番</tab-item>
+	      <tab-item @click.native="clickMe('film')">		影视</tab-item>
+	      <tab-item @click.native="clickMe('SpecialColumn')">专栏</tab-item>
 	    </tab>
 		<router-view></router-view>
 	</div>
@@ -28,11 +19,15 @@
 	  },
 	  data () {
 	    return {
-	      
 	    }
 	  },
+	  methods: {
+  		clickMe: function (asd){
+			this.$router.push({path:'/'+ asd})
+//			this.$router.go('/AfterTribes');
+	  	}
+	  },
 	  mounted() {
-	  	
 	  	
 	 },
 //	 computed:{
