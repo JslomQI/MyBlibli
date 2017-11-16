@@ -18,6 +18,9 @@ import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
 import FenquDetail from '@/components/dynamic/FenquDetail'
 import DetailGrade from '@/components/dynamic/DetailGrad'
+import Demo from '@/components/demo/Demo'
+import Message from '@/components/demo/Message'
+import Login from '@/components/demo/Login'
 //简历状态集管理
 import Vuex from "vuex"
 import store from "./store/TodoStore"
@@ -66,7 +69,17 @@ const routes = [
   		path:"",
   		component:DetailGrade
   	}]
-  }]
+  },{
+  	path:'/demo',
+  	component:Demo
+  },{
+  	path:'/message',
+  	component:Message
+  },{
+  	path:'login',
+  	component:Login
+  }
+  ]
 }
 ]
 

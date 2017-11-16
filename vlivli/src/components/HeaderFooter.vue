@@ -49,9 +49,9 @@ export default {
  		<!--<x-header :left-options="{showBack: isTrue, backText:'aaa'}" @click.native="backClick">
  			
  		</x-header>-->
- 		<Headers></Headers>
+ 		<Headers v-if="btn"></Headers>
  		<router-view @to-parent="getDetailData"></router-view>
- 		<Footers></Footers>
+ 		<Footers v-if="btn"></Footers>
   </div>
 </template>
 
@@ -71,7 +71,8 @@ export default {
       // preserves its current state and we are modifying
       // its initial state.
       msg: 'Hello World!',
-      isTrue: false
+      isTrue: false,
+      btn:true
     }
   },
   methods: {
@@ -80,6 +81,7 @@ export default {
   	},
   	getDetailData (value) {
   		this.isTrue = true
+  		this.btn = value
   	}
   }
 }

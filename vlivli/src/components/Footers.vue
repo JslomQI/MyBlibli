@@ -32,21 +32,21 @@
 <style>
 </style>-->
 <template>
-    <tabbar style="position:fixed">
+    <tabbar style="position:fixed;background: #FEFEFE;">
       <tabbar-item link="/">
-        <span slot="icon" class="iconfont icon-shouye red"></span>
+        <img slot="icon" src="../assets/t/f1.jpg">
         <span slot="label">首页</span>
       </tabbar-item>
       <tabbar-item show-dot link="/dynamic">
-      	<span slot="icon" class="iconfont icon-fenquweixuanzhong"></span>
+      	<img slot="icon" src="../assets/t/f2.jpg">
         <span slot="label">分类</span>
       </tabbar-item>
-      <tabbar-item selected link="/component/demo">
-        <span slot="icon" class="iconfont icon-dongtai"></span>
+      <tabbar-item selected link="/demo">
+        <img slot="icon" src="../assets/t/f3.jpg">
         <span slot="label">动态</span>
       </tabbar-item>
-      <tabbar-item badge="2">
-        <span slot="icon" class="iconfont icon-message-copy"></span>
+      <tabbar-item badge="2" link="/message">
+        <img slot="icon" src="../assets/t/f4.jpg">
         <span slot="label">消息</span>
       </tabbar-item>
     </tabbar>
@@ -69,5 +69,8 @@
 	}
 	.red{
 		color: #fa7298;
+	}
+	.weui-tabbar__item img{
+		margin: 0 !important;
 	}
 </style>
