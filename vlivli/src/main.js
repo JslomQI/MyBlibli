@@ -9,6 +9,10 @@ import VueRouter from 'vue-router'
 import App from './App'
 import Home from '@/components/_Home/Home.vue'
 import liveVideo from '@/components/_Home/liveVideo'
+import Groom from '@/components/_Home/groom'
+import Film from '@/components/_Home/film'
+import AfterTribes from '@/components/_Home/afterTribes'
+import SpecialColumn from '@/components/_Home/specialColumn'
 import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
@@ -32,9 +36,23 @@ const routes = [
   	path:'',
   	component:Home,
   	children:[{
-  		path:"",
+  		path:'',
   		component:liveVideo
-  	}]
+  	},{
+  		path:'/Groom',
+  		component:Groom
+  	},{
+  		path:'/Film',
+  		component:Film
+  	},{
+  		path:'/AfterTribes',
+  		component:AfterTribes
+  	},
+  	,{
+  		path:'/SpecialColumn',
+  		component:SpecialColumn
+  	}
+  	]
   },{
   	path:'/detail/:goodsID',
   	component:Detail
