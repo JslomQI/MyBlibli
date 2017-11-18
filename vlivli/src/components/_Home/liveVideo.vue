@@ -35,23 +35,23 @@
 		<div class="tabe_bar">
 			 <tabbar>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic1.png"/>
 		        <span slot="label">关注</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic2.png"/>
 		        <span slot="label">娱乐</span>
 		      </tabbar-item>
 		      <tabbar-item selected link="/component/demo">
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic3.png"/>
 		        <span slot="label">游戏</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic4.png"/>
 		        <span slot="label">手游</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic5.png"/>
 		        <span slot="label">绘画</span>
 		      </tabbar-item>
 		    </tabbar>
@@ -60,7 +60,7 @@
 	    	<div class="viedo_title">
 	    		<p class="video_title_p">
 	    			<span class="p_left">
-	    				<i></i>
+	    				<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico1.png" width="100%"/></i>
 	    				<span class="see_vide_style">推荐主播</span>
 	    			</span>
 	    			<span class="p_right">
@@ -86,7 +86,7 @@
 	    					<p class="video_style_num">
 	    						<span class="video_style">狼人杀</span>
 	    						<span class="video_num">
-	    							<i></i>
+	    							<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico2.png" width="100%"/></i>
 	    							<span>8680</span>
 	    						</span>
 	    					</p>
@@ -102,7 +102,39 @@
 	    					<p class="video_style_num">
 	    						<span class="video_style">狼人杀</span>
 	    						<span class="video_num">
-	    							<i></i>
+	    							<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico2.png" width="100%"/></i>
+	    							<span>8680</span>
+	    						</span>
+	    					</p>
+	    				</li>
+	    				<li class="video_list_li">
+	    					<a href="javascript:;" class="video_pic_name">
+	    						<img src="../../assets/home_src/img/home_video_list1.png"  width="100%">
+	    						<span class="man_video_name">老骚豆腐</span>
+	    					</a>
+	    					<p class="video_intro">
+	    						【豆腐】 狼人杀！折寿游戏！
+	    					</p>
+	    					<p class="video_style_num">
+	    						<span class="video_style">狼人杀</span>
+	    						<span class="video_num">
+	    							<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico2.png" width="100%"/></i>
+	    							<span>8680</span>
+	    						</span>
+	    					</p>
+	    				</li>
+	    				<li class="video_list_li">
+	    					<a href="javascript:;" class="video_pic_name">
+	    						<img src="../../assets/home_src/img/home_video_list1.png"  width="100%">
+	    						<span class="man_video_name">老骚豆腐</span>
+	    					</a>
+	    					<p class="video_intro">
+	    						【豆腐】 狼人杀！折寿游戏！
+	    					</p>
+	    					<p class="video_style_num">
+	    						<span class="video_style">狼人杀</span>
+	    						<span class="video_num">
+	    							<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico2.png" width="100%"/></i>
 	    							<span>8680</span>
 	    						</span>
 	    					</p>

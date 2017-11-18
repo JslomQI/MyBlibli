@@ -1,0 +1,110 @@
+.tribes_head {
+  height: 1.06rem;
+  width: 100%;
+  background: white; }
+  .tribes_head .double_btn {
+    width: 100%;
+    border-bottom: solid 1px #F6F6F6;
+    overflow: hidden; }
+    .tribes_head .double_btn .btn {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 0.67rem;
+      box-sizing: border-box;
+      overflow: hidden;
+      border: none;
+      background: none;
+      outline: none; }
+    .tribes_head .double_btn .btu_left img {
+      margin-left: 0.15rem; }
+    .tribes_head .double_btn .btu_right img {
+      margin-top: -0.85rem; }
+  .tribes_head .double_cli {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.05rem; }
+    .tribes_head .double_cli .cli {
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      text-align: center;
+      box-decoration-break: #A5A5A5; }
+      .tribes_head .double_cli .cli i {
+        width: 0.2rem;
+        height: 0.2rem;
+        display: inline-block;
+        margin: 0 0.1rem; }
+
+.con_styleOne {
+  margin-bottom: 0.1rem; }
+  .con_styleOne .styleOne_title .styleOne_title_in {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    padding: 0 0.03rem;
+    box-sizing: border-box; }
+    .con_styleOne .styleOne_title .styleOne_title_in .styleOne_title_left {
+      float: left;
+      color: #313131; }
+      .con_styleOne .styleOne_title .styleOne_title_in .styleOne_title_left i {
+        width: 0.2rem;
+        height: 0.2rem;
+        display: inline-block;
+        margin-right: 0.03rem; }
+    .con_styleOne .styleOne_title .styleOne_title_in .styleOne_title_right {
+      float: right;
+      color: #313131;
+      margin-right: 0.03rem; }
+  .con_styleOne .styleOne_list .styleOne_list_ul {
+    overflow: hidden;
+    padding-bottom: 0.1rem; }
+    .con_styleOne .styleOne_list .styleOne_list_ul .styleOne_list_li {
+      float: left;
+      width: 32%;
+      margin-left: 1.1%; }
+      .con_styleOne .styleOne_list .styleOne_list_ul .styleOne_list_li .list_in_title {
+        font-size: 0.14rem;
+        line-height: 0.2rem;
+        color: #363636;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .con_styleOne .styleOne_list .styleOne_list_ul .styleOne_list_li .series {
+        font-size: 0.12rem;
+        color: #A9A9A9;
+        line-height: 0.16rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+  .con_styleOne .styleOne_list .styleOne_bunt {
+    width: 100%;
+    min-height: 0.3rem; }
+
+.con_styleTwo .con_styleTwo_head {
+  line-height: 0.4rem;
+  color: #2A2A2A;
+  font-size: 0.15rem;
+  padding: 0 0.05rem; }
+  .con_styleTwo .con_styleTwo_head i {
+    width: 0.2rem;
+    height: 0.2rem;
+    display: inline-block;
+    margin-right: 0.05rem; }
+.con_styleTwo .styleTwo_list_ul {
+  padding: 0 5%; }
+  .con_styleTwo .styleTwo_list_ul .styleTwo_list_li {
+    width: 100%;
+    margin-bottom: 0.1rem; }
+    .con_styleTwo .styleTwo_list_ul .styleTwo_list_li .styleTwo_list_title {
+      line-height: 0.3rem;
+      color: #2A2A2A;
+      font-size: 0.16rem; }
+    .con_styleTwo .styleTwo_list_ul .styleTwo_list_li .styleTwo_list_say {
+      font-size: 0.14rem;
+      color: #979797;
+      line-height: 0.18rem; }
+
+/*# sourceMappingURL=afterTribes.css.map */
