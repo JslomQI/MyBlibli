@@ -1,0 +1,95 @@
+html, body {
+  background-color: #F4F4F4;
+}
+
+.dg-swiper {
+  margin-bottom: 0.1rem;
+}
+
+.datileBox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 0.53rem;
+}
+.datileBox .weui-grid-bottom {
+  padding: 0 0.06rem;
+}
+.datileBox .weui-grid-bottom p {
+  font-size: 0.12rem;
+  letter-spacing: 0.02rem;
+  line-height: 0.14rem;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vgyyyvertical;
+  height: 0.3rem;
+  margin-bottom: 0.08rem;
+}
+.datileBox .weui-grid-bottom .weui-grid-bottom-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.datileBox .weui-grid-bottom .weui-grid-bottom-b span {
+  font-size: 0.12rem;
+}
+
+.weui-grid {
+  padding: 0;
+  height: 1.6rem;
+  width: 44% !important;
+  margin-bottom: 0.06rem;
+  margin-top: 0.12rem;
+  background-color: #fff;
+  border-radius: 0.06rem;
+  overflow: hidden;
+}
+
+.weui-grid img {
+  width: 100%;
+  height: 60%;
+  margin-bottom: 0.08rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 1.5rem;
+}
+
+.weui-grid__icon {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.dg-content-top {
+  display: flex;
+  padding: 0 0.1rem;
+  justify-content: space-between;
+}
+.dg-content-top span {
+  font-size: 0.12rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dg-content-top aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dg-content-top aside img {
+  width: 0.26rem;
+  height: 0.22rem;
+  display: block;
+  margin-right: 0.06rem;
+}
+.dg-content-top aside span {
+  font-size: 0.12rem;
+  color: #FA7298;
+}
+
+/*# sourceMappingURL=deatailGrad.css.map */

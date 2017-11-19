@@ -18,6 +18,7 @@ import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
 import FenquDetail from '@/components/dynamic/FenquDetail'
 import DetailGrade from '@/components/dynamic/DetailGrad'
+import DetailGrade2 from '@/components/dynamic/DetailGrade2'
 import Demo from '@/components/demo/Demo'
 import Message from '@/components/demo/Message'
 import Login from '@/components/demo/Login'
@@ -67,7 +68,11 @@ const routes = [
   	component:FenquDetail,
   	children:[{
   		path:"",
-  		component:DetailGrade
+  		component:DetailGrade,
+  		children:[{
+  			path:"/hha",
+  		  component:DetailGrade2
+  		}]
   	}]
   },{
   	path:'/demo',
