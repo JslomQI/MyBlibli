@@ -137,6 +137,10 @@
                 font-size: 0.14rem;   
                 color: #979797;
                 line-height: 0.18rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
             }
         }
     }

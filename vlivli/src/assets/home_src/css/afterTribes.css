@@ -105,6 +105,10 @@
     .con_styleTwo .styleTwo_list_ul .styleTwo_list_li .styleTwo_list_say {
       font-size: 0.14rem;
       color: #979797;
-      line-height: 0.18rem; }
+      line-height: 0.18rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden; }
 
 /*# sourceMappingURL=afterTribes.css.map */
