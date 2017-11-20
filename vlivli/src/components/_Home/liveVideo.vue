@@ -35,23 +35,23 @@
 		<div class="tabe_bar">
 			 <tabbar>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic1.png"/>
 		        <span slot="label">关注</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic2.png"/>
 		        <span slot="label">娱乐</span>
 		      </tabbar-item>
 		      <tabbar-item selected link="/component/demo">
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic3.png"/>
 		        <span slot="label">游戏</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic4.png"/>
 		        <span slot="label">手游</span>
 		      </tabbar-item>
 		      <tabbar-item>
-		        <img slot="icon" src="../../assets/home_src/img/live_video_icon.png">
+		        <img slot="icon" src="../../assets/home_src/img/liveVideo_pic/liveVideo_pic5.png"/>
 		        <span slot="label">绘画</span>
 		      </tabbar-item>
 		    </tabbar>
@@ -60,7 +60,7 @@
 	    	<div class="viedo_title">
 	    		<p class="video_title_p">
 	    			<span class="p_left">
-	    				<i></i>
+	    				<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico1.png" width="100%"/></i>
 	    				<span class="see_vide_style">推荐主播</span>
 	    			</span>
 	    			<span class="p_right">
@@ -75,35 +75,19 @@
 	    	<div class="video_list">
 	    		<nav class="video_list_nav">
 	    			<ul class="video_list_ul">
-	    				<li class="video_list_li">
+	    				<li class="video_list_li" v-for="datat in liveVideoData">
 	    					<a href="javascript:;" class="video_pic_name">
 	    						<img src="../../assets/home_src/img/home_video_list1.png"  width="100%">
-	    						<span class="man_video_name">老骚豆腐</span>
+	    						<span class="man_video_name">{{datat.uname}}</span>
 	    					</a>
 	    					<p class="video_intro">
-	    						【豆腐】 狼人杀！折寿游戏！
+	    						{{datat.title}}
 	    					</p>
 	    					<p class="video_style_num">
-	    						<span class="video_style">狼人杀</span>
+	    						<span class="video_style">{{datat.area_v2_name}}</span>
 	    						<span class="video_num">
-	    							<i></i>
-	    							<span>8680</span>
-	    						</span>
-	    					</p>
-	    				</li>
-	    				<li class="video_list_li">
-	    					<a href="javascript:;" class="video_pic_name">
-	    						<img src="../../assets/home_src/img/home_video_list1.png"  width="100%">
-	    						<span class="man_video_name">老骚豆腐</span>
-	    					</a>
-	    					<p class="video_intro">
-	    						【豆腐】 狼人杀！折寿游戏！
-	    					</p>
-	    					<p class="video_style_num">
-	    						<span class="video_style">狼人杀</span>
-	    						<span class="video_num">
-	    							<i></i>
-	    							<span>8680</span>
+	    							<i><img src="../../assets/home_src/img/small_icon/liveVideo_ico2.png" width="100%"/></i>
+	    							<span>{{datat.online}}</span>
 	    						</span>
 	    					</p>
 	    				</li>
@@ -145,15 +129,25 @@
 		    onCancel () {
 		      console.log('on cancel')
 		    }
+		    
 		},
 		mounted(){
-			
+			this.$http({
+				method:"get",
+				params: {showapi_appid: 49856, showapi_sign: "07be8e41eae740c1a5e7f4020a4273ad", page: 1},
+				url:"http://route.showapi.com/1367-1"
+			}).then((data)=>{
+				console.log(data.data.showapi_res_body.data);
+				this.liveVideoData = data.data.showapi_res_body.data;
+				
+			})
 		},
 		data: function(){
 			return {
 				results: [],
       			value: '里番',
-      			isFirstVideo : true
+      			isFirstVideo : true,
+      			liveVideoData:[]
 			}
 		}
 	}

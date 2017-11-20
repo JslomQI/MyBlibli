@@ -1,0 +1,112 @@
+.special_top {
+  width: 100%;
+  height: 1.92rem;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .special_top .special_swiper {
+    margin-top: 0.1rem; }
+    .special_top .special_swiper .special_swiper_wrapper .slide {
+      padding: 0 0.1rem; }
+  .special_top .top_btn_four {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.16rem; }
+    .special_top .top_btn_four .btn {
+      float: left;
+      width: 15%;
+      height: 0.65rem;
+      overflow: hidden;
+      box-sizing: border-box;
+      position: relative;
+      border: none;
+      background: none;
+      outline: none; }
+      .special_top .top_btn_four .btn .btn_text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        font-size: 0.12rem;
+        background: white;
+        display: block;
+        width: 100%;
+        color: #424242; }
+    .special_top .top_btn_four .btn:nth-of-type(2) img {
+      margin-top: -0.78rem; }
+    .special_top .top_btn_four .btn:nth-of-type(3) img {
+      margin-top: -1.6rem; }
+    .special_top .top_btn_four .btn:nth-of-type(4) img {
+      margin-top: -2.4rem; }
+
+.special_con .special_head {
+  line-height: 0.4rem;
+  color: #2A2A2A;
+  font-size: 0.15rem;
+  padding: 0 0.05rem; }
+  .special_con .special_head .etc_right {
+    float: right; }
+    .special_con .special_head .etc_right i {
+      width: 0.2rem;
+      height: 0.2rem;
+      display: inline-block;
+      margin-right: 0.05rem; }
+.special_con .special_list_ul {
+  padding: 0 5%; }
+  .special_con .special_list_ul .special_list_li {
+    width: 100%;
+    margin-bottom: 0.1rem;
+    border: solid 1px #f2f2f2;
+    padding: 0.08rem 0;
+    background-color: white;
+    border-radius: 0.08rem; }
+    .special_con .special_list_ul .special_list_li .li_author {
+      font-size: 0.13rem;
+      color: #6A6A6A;
+      line-height: 0.35rem;
+      height: 0.35rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-left: 0.03rem; }
+      .special_con .special_list_ul .special_list_li .li_author i {
+        width: 0.2rem;
+        height: 0.2rem;
+        display: inline-block;
+        margin-right: 0.05rem; }
+    .special_con .special_list_ul .special_list_li .special_list_title {
+      line-height: 0.3rem;
+      color: #2A2A2A;
+      font-size: 0.16rem;
+      margin-left: 0.03rem; }
+    .special_con .special_list_ul .special_list_li .special_list_say {
+      margin-top: 0.1rem;
+      font-size: 0.14rem;
+      color: #747474;
+      line-height: 0.2rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin-left: 0.03rem; }
+    .special_con .special_list_ul .special_list_li .li_bottom_ic {
+      margin-top: 0.1rem;
+      font-size: 0.12rem;
+      color: #989898;
+      padding: 0 0.03rem;
+      overflow: hidden;
+      color: #979797; }
+      .special_con .special_list_ul .special_list_li .li_bottom_ic i {
+        width: 0.12rem;
+        height: 0.12rem;
+        display: inline-block;
+        margin-right: 0.05rem; }
+      .special_con .special_list_ul .special_list_li .li_bottom_ic .ic_left {
+        float: left;
+        margin-left: 0.03rem; }
+      .special_con .special_list_ul .special_list_li .li_bottom_ic .ic_right {
+        float: right;
+        margin-right: 0.03rem; }
+
+/*# sourceMappingURL=specialColumen.css.map */

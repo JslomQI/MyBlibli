@@ -1,0 +1,94 @@
+body {
+  font-size: 0.2rem; }
+
+.groom_top {
+  line-height: 0.35rem;
+  height: 0.35rem;
+  font-size: 0.13rem;
+  padding: 0 0.1rem;
+  background: #F4F4F4;
+  box-sizing: border-box;
+  border-bottom: solid 1px #D1D1D1; }
+  .groom_top .groom_top_left {
+    font-size: 0.13rem;
+    color: #F07FA0;
+    float: left; }
+  .groom_top .groom_top_right {
+    float: right; }
+    .groom_top .groom_top_right a {
+      color: #9A9A9A; }
+      .groom_top .groom_top_right a i {
+        display: inline-block;
+        width: 0.18rem;
+        height: 0.18rem;
+        margin-right: 0.03rem; }
+
+.groom_nav .groom_nav_ul {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box; }
+  .groom_nav .groom_nav_ul .groom_nav_ul_li {
+    width: 46.5%;
+    margin-left: 2%;
+    float: left;
+    border: solid 1px #919191;
+    box-shadow: 0 0 0.02rem #e0e0e0;
+    border-radius: 0.05rem;
+    margin-bottom: 0.1rem;
+    box-sizing: border-box; }
+    .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_head {
+      height: 60%;
+      overflow: hidden;
+      position: relative; }
+      .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_head .see_head_p {
+        position: absolute;
+        bottom: 0.03rem;
+        width: 100%;
+        font-size: 0.12rem;
+        padding: 0 0.03rem;
+        box-sizing: border-box;
+        color: white; }
+        .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_head .see_head_p .see_head_p_left {
+          float: left; }
+          .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_head .see_head_p .see_head_p_left i {
+            display: inline-block;
+            width: 0.1rem;
+            height: 0.1rem;
+            margin-right: 0.05rem; }
+        .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_head .see_head_p .see_head_p_right {
+          float: right; }
+    .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_under {
+      width: 100%;
+      font-size: 0.11rem;
+      color: #343434;
+      padding: 0.03rem; }
+      .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_under .under_title {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        line-height: 0.18rem;
+        min-height: 0.36rem; }
+      .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_under .under_end {
+        margin-top: 0.12rem;
+        font-size: 0.14rem;
+        color: #919191;
+        padding: 0 0.05rem; }
+        .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_under .under_end .tag_list {
+          display: block;
+          float: left;
+          height: 0.18rem;
+          width: 0.62rem;
+          overflow: hidden;
+          white-space: nowrap; }
+        .groom_nav .groom_nav_ul .groom_nav_ul_li .li_see_under .under_end .end_more {
+          float: right;
+          width: 0.12rem;
+          height: 0.12rem;
+          display: inline-block;
+          overflow: hidden;
+          margin-right: 0.1rem; }
+
+/*# sourceMappingURL=groom.css.map */

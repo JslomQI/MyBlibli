@@ -1,0 +1,147 @@
+
+.tribes_head{
+    height: 1.06rem;
+    width: 100%;
+    background: white;
+    .double_btn{
+        width: 100%;
+        border-bottom: solid 1px #F6F6F6;
+        overflow: hidden;
+        .btn{
+            display: block;
+            float: left;
+            width: 50%;
+            height: 0.67rem;
+            box-sizing: border-box;
+            overflow: hidden;
+            border: none;
+            background: none;
+            outline: none;
+        }
+        .btu_left{
+            img{
+                margin-left: 0.15rem;
+            }
+        }
+        .btu_right{
+            img{
+                margin-top: -0.85rem;
+            }
+        }
+    }
+    .double_cli{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 0.05rem;
+        .cli{
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            text-align: center;
+            box-decoration-break: #A5A5A5;
+            i{
+                width: 0.2rem;
+                height: 0.2rem;
+                display: inline-block;
+                margin: 0 0.1rem;
+            }
+        }
+    }
+}
+.con_styleOne{
+    margin-bottom: 0.1rem;
+    .styleOne_title{
+        .styleOne_title_in{
+            width: 100%;
+            overflow: hidden;
+            background: white;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            padding: 0 0.03rem;
+            box-sizing: border-box;
+            .styleOne_title_left{
+                float: left;
+                color: #313131;
+                i{
+                    width: 0.2rem;
+                    height: 0.2rem;
+                    display: inline-block;
+                    margin-right: 0.03rem;
+                }
+            }
+            .styleOne_title_right{
+                float: right;
+                color: #313131;
+                margin-right: 0.03rem;
+            }
+        }
+    }
+    .styleOne_list{
+       .styleOne_list_ul{
+           overflow: hidden;
+           padding-bottom: 0.1rem;
+           .styleOne_list_li{
+               float: left;
+               width: 32%;
+               margin-left: 1.1%;
+               .list_in_title{
+                   font-size: 0.14rem;
+                   line-height: 0.2rem;
+                   color: #363636;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                   white-space: nowrap;
+               }
+               .series{
+                   font-size: 0.12rem;
+                   color: #A9A9A9;
+                   line-height: 0.16rem;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                   white-space: nowrap;
+               }
+           }
+       }
+       .styleOne_bunt{
+           width: 100%;
+           min-height: 0.3rem;
+       }
+    }
+}
+
+.con_styleTwo{
+    .con_styleTwo_head{
+        line-height: 0.4rem;
+        color: #2A2A2A;
+        font-size: 0.15rem;
+        padding: 0 0.05rem;
+        i{
+            width: 0.2rem;
+            height: 0.2rem;
+            display: inline-block;
+            margin-right: 0.05rem;
+        }
+    }
+    .styleTwo_list_ul{
+        padding: 0 5%;
+        .styleTwo_list_li{
+            width: 100%;
+            margin-bottom: 0.1rem;
+            .styleTwo_list_title{
+                 line-height: 0.3rem;
+                color: #2A2A2A;
+                font-size: 0.16rem;
+                
+            }
+            .styleTwo_list_say{
+                font-size: 0.14rem;   
+                color: #979797;
+                line-height: 0.18rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+            }
+        }
+    }
+}
