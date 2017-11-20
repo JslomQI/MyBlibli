@@ -21,6 +21,9 @@ import DetailGrade from '@/components/dynamic/DetailGrad'
 import Demo from '@/components/demo/Demo'
 import Message from '@/components/demo/Message'
 import Login from '@/components/demo/Login'
+import Register from '@/components/demo/register'
+import Dtvideo from '@/components/demo/Dtvideo.vue'
+import Dtzhuanlan from '@/components/demo/Dtzhuanlan.vue'
 //简历状态集管理
 import Vuex from "vuex"
 import store from "./store/TodoStore"
@@ -71,13 +74,23 @@ const routes = [
   	}]
   },{
   	path:'/demo',
-  	component:Demo
+  	component:Demo,
+  	children:[{
+  		path: "/",
+  		component: Dtvideo
+  	},{
+  		path:"/demo/zhuanlan",
+  		component: Dtzhuanlan
+  	}]
   },{
   	path:'/message',
   	component:Message
   },{
-  	path:'login',
+  	path:'/login',
   	component:Login
+  },{
+  	path:'/register',
+  	component:Register
   }
   ]
 }

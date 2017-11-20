@@ -5,7 +5,7 @@
 			<p>
 				<span class="iconfont icon-gengduo"></span>
 				<img src="../assets/demo/1.jpg">
-				<span>未登录</span>
+				<span>{{info}}</span>
 			</p>
 			<p>
 				<span class="iconfont icon-daogouhuiyuanpaiming"></span>
@@ -24,7 +24,26 @@
 	export default {
 	  	components: {
 	  		Tab, TabItem
-	  	}
+	  	},
+	  	data:function(){
+	  		return {
+	  			info: "未登录"
+	  		}
+	  	},
+	  	beforeMount(){
+	  		let users = localStorage.getItem("user");
+			if (users!==null) {
+				console.log(users);
+				let name = JSON.parse(users).users;
+				let pwd = JSON.parse(users).pwd;
+				
+				if (name!==undefined&&pwd!==undefined) {
+					this.info= name
+				}
+			}
+			
+			
+		}
   	}
 </script>
 
