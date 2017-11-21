@@ -13,6 +13,7 @@ import Groom from '@/components/_Home/groom'
 import Film from '@/components/_Home/film'
 import AfterTribes from '@/components/_Home/afterTribes'
 import SpecialColumn from '@/components/_Home/specialColumn'
+import DetailVideo from '@/components/_Home/DetailVideo'
 import Detail from '@/components/Detail'
 import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
@@ -29,7 +30,6 @@ import store from "./store/TodoStore"
 import { AjaxPlugin } from 'vux'
 Vue.use(AjaxPlugin)
 Vue.use(VueRouter)
-
 Vue.use(Vuex)
 
 const routes = [
@@ -83,6 +83,9 @@ const routes = [
   },{
   	path:'login',
   	component:Login
+  },{
+    path: '/DetailVideo',
+  	component: DetailVideo
   }
   ]
 }

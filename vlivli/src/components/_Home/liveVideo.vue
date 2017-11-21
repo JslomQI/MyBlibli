@@ -24,14 +24,20 @@
 		    @on-submit="onSubmit"
 		    ref="search"></search>
 		</div>
-		<swiper auto height="100px">
-	      <swiper-item class="black">
-	      	<a href="javascript:;"><img src="../../assets/home_src/img/home_banner1.png" width="100%"></a>
-	      </swiper-item>
-	     <swiper-item class="black">
-	      	<a href="javascript:;"><img src="../../assets/home_src/img/home_banner.png" width="100%"></a>
-	      </swiper-item>
-	    </swiper>
+	    <div class="swiper_box">
+	    	<swiper :options="swiperOption">
+				<swiper-slide>
+					<img src="../../assets/home_src/img/home_banner1.png" width="100%" />
+				</swiper-slide>
+				<swiper-slide>
+					<img src="../../assets/home_src/img/home_banner1.png" width="100%" />
+				</swiper-slide>
+				<swiper-slide>
+					<img src="../../assets/home_src/img/home_banner1.png" width="100%" />
+				</swiper-slide>
+				<div class="swiper-pagination"  slot="pagination"></div>
+			</swiper>
+	    </div>
 		<div class="tabe_bar">
 			 <tabbar>
 		      <tabbar-item>
@@ -99,10 +105,11 @@
 </template>
 
 <script>
-	import { Swiper, SwiperItem, Search, Group, Cell, XButton, Tabbar, TabbarItem} from 'vux'
+	import { Search, Group, Cell, XButton, Tabbar, TabbarItem} from 'vux'
+	import { swiper, swiperSlide } from "vue-awesome-swiper"
 	export default {
 		components: {
-			Swiper, SwiperItem, Search, Group, Cell, XButton, Tabbar, TabbarItem
+			swiper, swiperSlide, Search, Group, Cell, XButton, Tabbar, TabbarItem
 		},
 		methods:{
 		    setFocus () {
@@ -147,7 +154,12 @@
 				results: [],
       			value: '里番',
       			isFirstVideo : true,
-      			liveVideoData:[]
+      			liveVideoData:[],
+      			swiperOption: {
+					autoplay: 3000,
+					loop: true,
+					pagination: '.swiper-pagination'
+      			}
 			}
 		}
 	}

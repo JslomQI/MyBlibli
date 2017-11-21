@@ -1,13 +1,11 @@
 .special_top {
   width: 100%;
-  height: 1.92rem;
+  height: 2.3rem;
   background: #FFFFFF;
   box-sizing: border-box;
   overflow: hidden; }
-  .special_top .special_swiper {
-    margin-top: 0.1rem; }
-    .special_top .special_swiper .special_swiper_wrapper .slide {
-      padding: 0 0.1rem; }
+  .special_top .swiper-pagination {
+    text-align: right; }
   .special_top .top_btn_four {
     overflow: hidden;
     display: flex;

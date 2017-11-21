@@ -1,8 +1,8 @@
 <template>
   <div>
- 		<Headers v-if="btn"></Headers>
+ 		<Headers v-if="btn_isNotVideo"></Headers>
  		<router-view @to-parent="getDetailData"></router-view>
- 		<Footers v-if="btn"></Footers>
+ 		<Footers v-if="btn_isNotVideo"></Footers>
   </div>
 </template>
 
@@ -22,7 +22,9 @@ export default {
       // its initial state.
       msg: 'Hello World!',
       isTrue: false,
-      btn:true
+      btn:true,
+      isNotDetailVideo: true,
+      btn_isNotVideo: true
     }
   },
   methods: {
@@ -30,9 +32,16 @@ export default {
   		this.isTrue = false
   	},
   	getDetailData (value) {
+//		console.log(value)
   		this.isTrue = true
   		this.btn = value
   	}
+  },
+  beforeMount (){
+  },
+  mounted(){
+  	this.btn_isNotVideo = this.isNotDetailVideo && this.btn
+  	console.log(this.btn_isNotVideo)
   }
 }
 </script>
