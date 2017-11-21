@@ -1,19 +1,19 @@
 <template>
 	<div>
-		<scroller class="ScoBox" lock-y :scrollbar-x=false>
-	      <div class="box1">
-	        <div class="box1-item" v-for="i in children"><span>{{' ' + i.name + ' '}}</span></div>
-	      </div>
+		<scroller class="ScoBox" lock-y :scrollbar-x=false ref="spanKuan2">
+	      <div class="box1" ref = "box1kuan">
+	        	<div class="box1-item" v-for="i in children" :key="i.tid">
+		        <router-link :to="{ path: '/hha', query: { reid: i.tid ,gogo:false}}" >
+		        	<span @click="gotoDG(i.tid)" class="spanKuan">{{' ' + i.name + ' '}}</span>	      
+		        </router-link>
+	        	</div>
+  		  </div>
 	   </scroller>
 	   
 	   
-	   <router-view></router-view>
+	   <router-view :clickToDg="clickToDg" :channelID="channelID"></router-view>
 	   
 	</div>
-		
-		
-		
-    
 </template>
 
 <script>
@@ -26,33 +26,55 @@ export default {
     GridItem
   },
   methods: {
-    onItemClick () {
-      console.log('on item click')
-    }
   },
   data () {
     return {
-      children:[],
-      DetailD:[],
-      showList1: true,
-      scrollTop: 0
+    	clickToDg : "",
+    	aar : [],
+    	aar2: [],
+	    box1Length : 0,
+	  	clickToDg : "",
+		children : [],
+		DetailD : [],
+		showList1 : true,
+		scrollTop : 0,
+		channelID : 0
     }
   },
+  beforeCreated(){
+  	this.channelID = this.$route.query.channelID
+  },
   mounted () {
+  	
+  	
   	this.$http({
 		method:"get",
 		url:"../../../../static/json/region2.json"
 	}).then((data)=>{
-		this.children =  eval(data.data)[1].children
-		console.log(this.children)
+		this.children = eval(data.data)[this.channelID].children
 	})
+	
+//	this.aar2 = document.getElementsByClassName("spanKuan")
+//	console.log(this.aar2)
+//	var arr = this.ara2.childNodes;
+	console.log(this.aar)
+    for (var i = 0; i<this.aar.length; i++) {
+    	this.box1Length += this.aar[i].offsetWidth
+    	console.log(this.box1Length)
+    	this.$refs.box1kuan.style.width = this.box1Length+"px" 
+    }
   },
+  	
   methods: {
-    
+    gotoDG(id){
+    	this.clickToDg = id
+    },
     onScroll (pos) {
       this.scrollLeft = pos.left
     }
   }
+  
+   
 }
 </script>
 
@@ -66,16 +88,17 @@ html,body{
 }
 .box1 {
   position: relative;
-  width: 3.5rem;
 }
-.box1-item {color: #fff;
+.box1-item{
+	float: left;
+}
+.box1-item span{color: #fff;
   font-size: 0.12rem;
-  width: 0.5rem;
   height: 0.2rem;
   background-color: #FA7298;
   display:inline-block;
   float: left;
-  margin: 0 0.08rem;
+  padding: 0 0.1rem;
   text-align: center;
 }
 .box1-item:first-child {
