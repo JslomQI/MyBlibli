@@ -3,7 +3,7 @@
 	<div class="headers">
 		<div>
 			<p>
-				<span class="iconfont icon-gengduo"></span>
+				<span class="iconfont icon-gengduo" v-on:click="clickle()"></span>
 				<img src="../assets/demo/1.jpg">
 				<span>{{info}}</span>
 			</p>
@@ -14,6 +14,7 @@
 				<span class="iconfont icon-soushuo"></span>
 			</p>	
 		</div>
+		
 	</div>
 	
 </template>
@@ -28,6 +29,13 @@
 	  	data:function(){
 	  		return {
 	  			info: "未登录"
+	  		}
+	  	},
+	  	methods:{
+	  		clickle:function(){
+	  			console.log(1)
+	  			this.is = true
+	  			this.$emit("to-parents",true);
 	  		}
 	  	},
 	  	beforeMount(){

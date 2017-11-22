@@ -4,7 +4,7 @@
 		
 			<router-link to="/login"><img src="../../assets/t/bj2.jpg" ></router-link>
 		</div>
-		<div v-if="btn7">zidai</div>
+		<div v-if="btn7" style="text-align: center;margin-top: 0.4rem;">亲，你的消息已被外星人接走了</div>
 	</div>
 </template>
 
