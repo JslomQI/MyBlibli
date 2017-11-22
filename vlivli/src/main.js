@@ -72,10 +72,9 @@ const routes = [
   	children:[{
   		path:"",
   		component:DetailGrade,
-  		children:[{
-  			path:"/hha",
-  		  component:DetailGrade2
-  		}]
+  	},{
+		  path:"/hha",
+	    component:DetailGrade2
   	}]
   },{
   	path:'/demo',

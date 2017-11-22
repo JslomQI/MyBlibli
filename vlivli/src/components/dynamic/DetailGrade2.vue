@@ -2,7 +2,7 @@
 	<div >
 		<swiper :options="swiperOption" ref="mySwiper"  class="dg-swiper">
     <!-- slides -->
-		    <swiper-slide v-for="i in gradeDt2"><img :src="i.cover"></swiper-slide>
+		    <swiper-slide v-for="(i,d) in gradeDt2" :key="d"><img :src="i.cover"></swiper-slide>
 		    <!-- Optional controls -->
 		    <div class="swiper-pagination"  slot="pagination"></div>
 	    </swiper>
@@ -37,38 +37,42 @@
 			</ul>
 		</div>
 	</div>
-	
 </template>
 
 <script>
 	import {Grid,GridItem } from 'vux'
 	import 'swiper/dist/css/swiper.css'
 	import "../../assets/dynamicSrc/css/deatailGrad.css"
+	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 	export default {
+		
 		components: {
 		    Grid,
-		    GridItem
+		    GridItem,
+		    swiper, 
+		    swiperSlide
 		},
 		
 		created() {
-		    this.id = this.$route.query.reid;
+		    this.zujianid = this.$route.query.reid;
 		},
 		updated(){
 			this.ids = this.$route.query.reid;
-			console.log(this.ids,this.id)
 			if (this.ids !== this.id) {
 				this.$http({
 					method:"get",
 					url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=global&duration=7&new=false"
 				}).then((data)=>{
-					this.gradeDt  = data.data.result.list.slice(Math.ceil(this.id/4),Math.ceil(this.id/4)+6)
-					this.gradeDt2 = data.data.result.list.slice(Math.ceil(this.id/4),Math.ceil(this.id/4)+4)
+					this.gradeDt  = data.data.result.list.slice(Math.ceil(this.ids/4),Math.ceil(this.ids/4)+6)
+					this.gradeDt2 = data.data.result.list.slice(Math.ceil(this.ids/4),Math.ceil(this.ids/4)+4)
 				})
 			}
 			
 		},
 	  	data(){
 	  		return{
+	  			
+				mysg : this.clickToDg,
 	  			gradeDt:[],
 	  			gradeDt2:[],
 	  			swiperOption: {
@@ -79,7 +83,9 @@
 		        }
 	  		}
 	  	},
+	  	props:["clickToDg"],
 		mounted(){
+			console.log(this.mysg)
 			this.$http({
 				method:"get",
 				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=global&duration=7&new=false"
