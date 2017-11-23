@@ -2,11 +2,23 @@
 	<div>
 		<div class="film_top">
 			<div class="film_swiper">
-				<div class="film_swiper_wrapper">
+				<!--<div class="film_swiper_wrapper">
 					<div class="slide">
 						<img src="../../assets/home_src/img/film_pic1.png" width="100%" />
 					</div>
-				</div>
+				</div>-->
+				<swiper :options="swiperOption">
+					<swiper-slide>
+						<img src="../../assets/home_src/img/film_pic1.png" width="100%" />
+					</swiper-slide>
+					<swiper-slide>
+						<img src="../../assets/home_src/img/film_pic1.png" width="100%" />
+					</swiper-slide>
+					<swiper-slide>
+						<img src="../../assets/home_src/img/film_pic1.png" width="100%" />
+					</swiper-slide>
+					<div class="swiper-pagination"  slot="pagination"></div>
+				</swiper>
 			</div>
 			<div class="top_btn_four">
 				 <tabbar>
@@ -142,11 +154,20 @@
 
 <script>
 	import { Tabbar, TabbarItem} from 'vux'
+	import { swiper, swiperSlide } from "vue-awesome-swiper"
 	export default {
 		name: "film",
 		components: {
-			Tabbar, TabbarItem
+			Tabbar, TabbarItem, swiper, swiperSlide
 		},
+		data(){
+			return {
+				swiperOption:{
+					autoplay: 3000,
+					loop: true
+				}
+			}
+		}
 	}
 </script>
 

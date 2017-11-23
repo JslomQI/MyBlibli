@@ -14,6 +14,7 @@ import Film from '@/components/_Home/film'
 import AfterTribes from '@/components/_Home/afterTribes'
 import SpecialColumn from '@/components/_Home/specialColumn'
 import Detail from '@/components/Detail'
+import DetailVideo from '@/components/_Home/DetailVideo'
 import PageTransition from '@/components/PageTransition'
 import Dynamic from '@/components/dynamic/Dynamic'
 import FenquDetail from '@/components/dynamic/FenquDetail'
@@ -95,6 +96,9 @@ const routes = [
   },{
   	path:'/register',
   	component:Register
+  },{
+    path: '/DetailVideo',
+  	component: DetailVideo
   }
   ]
 }

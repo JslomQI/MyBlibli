@@ -14,7 +14,7 @@
 		<nav class="groom_nav">
 			<ul class="groom_nav_ul">
 				<li class="groom_nav_ul_li" v-for="(data, index) in goodsData">
-					<div class="li_see_head">
+					<div class="li_see_head" v-on:click="DetailVideo(data.season_id)">
 						<img src="../../assets/home_src/img/groom_pic1.png" width="100%" />
 						<!--<img v-bind:src="data.cover" width="100%" />-->
 						<p class="see_head_p">
@@ -64,6 +64,11 @@
 				this.goodsData = data.data.result.list;
 				console.log(this.goodsData)
 			})
+		},
+		methods: {
+			DetailVideo: function (value){
+				this.$router.push({path:'/DetailVideo',query:{season_id: value}})
+			}
 		}
 	}
 </script>
