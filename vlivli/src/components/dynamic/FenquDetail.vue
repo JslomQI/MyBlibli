@@ -42,16 +42,18 @@ export default {
     }
   },
   beforeCreated(){
-  	this.channelID = this.$route.query.channelID
   },
   mounted () {
   	
+  	this.channelID = this.$route.query.channelID
   	
   	this.$http({
 		method:"get",
 		url:"../../../../static/json/region2.json"
 	}).then((data)=>{
+		console.log(data)
 		this.children = eval(data.data)[this.channelID].children
+		console.log(this.children)
 	})
 	
 //	this.aar2 = document.getElementsByClassName("spanKuan")

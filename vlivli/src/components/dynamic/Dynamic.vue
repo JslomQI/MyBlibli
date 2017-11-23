@@ -26,7 +26,7 @@
 		<div class="fenqQu_content">
 			
 		
-			<div class="fanjuqu">
+			<div class="fanjuqu" v-for="(n,k) in 6">
 				<header class="anyFengHead">
 					<div class="anyFengname">
 						<img src="../../assets/fengquPic/ic_category_t13.png" class="anyFengquTu"/>
@@ -46,26 +46,66 @@
 									<div class="weui-grid-bottom-b-l">
 										<img src="../../assets/fengquPic/icon_video_play_num.png"/>	
 										<span>
-											{{Math.ceil(i.play_count/10000)/10+"万"}}
+											{{Math.ceil(i.play_count/1000)/10+"万"}}
 										</span>
 									</div>
 									<div class="weui-grid-bottom-b-l">
 										<img src="../../assets/fengquPic/ic_collect_star.png"/>	
 										<span>
-											{{Math.ceil(i.fav/10000)/10+"万"}}
+											{{Math.ceil(i.fav/1000)/10+"万"}}
 										</span>
 									</div>
 								</div>
 							</div>
 						</li>
 						<footer>
-							<router-link :to="{ path: '/fenquDetail',query: {channelID: 1}}">
+							<router-link :to="{ path: '/fenquDetail',query: {channelID: 1}}" class="footMore">
 								
 							更多番剧
 							</router-link>
-							<span>
-								这有更多东西啊
-							</span>
+						</footer>
+					</ul>
+					
+				</header>
+				
+				
+				
+				<header class="anyFengHead">
+					<div class="anyFengname">
+						<img src="../../assets/fengquPic/ic_category_t13.png" class="anyFengquTu"/>
+						<span class="anyFengnames">
+							国创区
+						</span>
+					</div>
+					
+					<ul class="datileBox">
+						<li class="weui-grid" v-for="(i,d) in donghuaqu" :key="d">
+							<img :src="i.cover">
+							<div class="weui-grid-bottom">
+								<p>
+									{{i.title}}
+								</p>
+								<div class="weui-grid-bottom-b">
+									<div class="weui-grid-bottom-b-l">
+										<img src="../../assets/fengquPic/icon_video_play_num.png"/>	
+										<span>
+											{{Math.ceil(i.play_count/1000)/10+"万"}}
+										</span>
+									</div>
+									<div class="weui-grid-bottom-b-l">
+										<img src="../../assets/fengquPic/ic_collect_star.png"/>	
+										<span>
+											{{Math.ceil(i.fav/1000)/10+"万"}}
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<footer>
+							<router-link :to="{ path: '/fenquDetail',query: {channelID: 1}}" class="footMore">
+								
+							更多番剧
+							</router-link>
 						</footer>
 					</ul>
 					
@@ -73,25 +113,7 @@
 				
 			</div>
 			
-			<div class="donghuaqu">
-				
-			</div>
 			
-			<div class="guochangqu">
-				
-			</div>
-			
-			<div class="yingyuequ">
-				
-			</div>
-			
-			<div class="wudaoqu">
-				
-			</div>
-			
-			<div class="youxiqu">
-				
-			</div>
 		</div>
 	</div>
 </template>
@@ -125,38 +147,12 @@
 			
 			this.$http({
 				method:"get",
-				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=1&duration=7&new=false"
+				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=cn&duration=cn&new=false"
 			}).then((data)=>{
-				console.log(data)
+				this.donghuaqu = data.data.result.list.slice(this.shuaxinCount+4,this.shuaxinCount+8)
+				console.log(this.donghuaqu)
 			})
 			
-			this.$http({
-				method:"get",
-				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=168&duration=7&new=false"
-			}).then((data)=>{
-				console.log(data)
-			})
-			
-			this.$http({
-				method:"get",
-				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=3&duration=7&new=false"
-			}).then((data)=>{
-				console.log(data)
-			})
-			
-			this.$http({
-				method:"get",
-				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=129&duration=7&new=false"
-			}).then((data)=>{
-				console.log(data)
-			})
-			
-			this.$http({
-				method:"get",
-				url:"https://api.imjad.cn/bilibili/v2/?get=rank&type=all&content=4&duration=7&new=false"
-			}).then((data)=>{
-				console.log(data)
-			})
 			
 		}
 		
@@ -168,7 +164,20 @@
 <style  scoped>
 	
 	.fanjuqu footer{
-		
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.fanjuqu footer .footMore{
+		background-color: #fff;
+		text-align: center;
+		border-radius: 10%;
+		font-size: 0.12rem;
+		margin-left: 0.1rem;
+		width: 0.8rem;
+		height: 0.24rem;
+		line-height: 0.24rem;
+		color: #000000;
 	}
  	
 	.fenqQu_content{
@@ -244,7 +253,8 @@
 	}
 	.datileBox .weui-grid-bottom .weui-grid-bottom-b span {
 		-webkit-transform: scale(0.90); /* Safari 和 Chrome */
-    	-webkit-transform-origin:0 0; 
+    	-webkit-transform-origin:0 0; 	
+    	width: 0.5rem;
 	  font-size: 0.12rem;
 	}
 	.datileBox .weui-grid-bottom .weui-grid-bottom-b .weui-grid-bottom-b-l{
